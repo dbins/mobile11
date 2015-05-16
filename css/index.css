@@ -1,107 +1,30 @@
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
+.conteudo{ float:left; position:relative; width:99%; min-height:250px; /* margin:10px;*/ padding:8px; line-height:23px;}
+.produtos{ float:left; position:relative; width:19%; min-height:425px; margin:10px 19px 10px 37px; font-family:Segoe UI, Calibri, Arial, verdana;
+font-size:14px; color:#666; text-transform:uppercase; text-align:center;}
+.produtos-images{ float:left; position:relative; text-align:center;}
+.produtos-images:hover{opacity: 0.8; cursor:pointer; border:1px #e86c6e solid; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; -o-border-radius:3px;  }
+.produtos-preco{color:#e86c6e; font-size:22px; font-family: 'bebas_neueregular'; float:left; position:relative; width:100%;}
+#produtos-preco-promo{color:#ad2d36; font-size:22px; font-family: 'bebas_neueregular'; float:left; position:relative; width:100%;}
+.valor{ float:left; width:100%; position:relative; margin:5px 0 0 0; font-size:25px; font-family: 'bebas_neueregular';}
+.preco-promo{ text-decoration: line-through; font-size:19px; opacity:0.8; -webkit-opacity:0.8; -ms-opacity:0.8; -o-opacity:0.8; -moz-opacity:0.8;}
+.produtos-tit{ float:left; position:relative; width:100%;}
 
-body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#FFFFFF;
-    background-image:linear-gradient(top, #CCC 0%, #FFFFFF 51%);
-    background-image:-webkit-linear-gradient(top, #CCC 0%, #FFFFFF 51%);
-    background-image:-ms-linear-gradient(top, #CCC 0%, #FFFFFF 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #CCC),
-        color-stop(0.51, #FFFFFF)
-    );
-    background-attachment:fixed;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    width:100%;
-}
+.descprod{ float:left; position:relative; width:95%; margin:5px 5px 10px 5px;}
+.titulos{ float:left; position:relative; border-bottom:1px #e86c6e solid; margin:10px 0 0 0; width:100%; font-size:1.8em; color:#e86c6e; text-align:left; padding:5px; font-family: 'bebas_neueregular';}
+#descricao{ width:98%!important}
+.buyprod{ margin-top:10px;}
+.produtos-tit{ float:left; position:relative; width:100%;}
+#imgprod{ float:left; position:relative; max-width:300px; height:auto; margin:0 5px 5px 0; border:1px #f8d3d3 solid}
+.prodtotal{ float:left; margin:0 5px 0 -5px; position:relative; max-width:380px; height:auto;}
+.iconprod{ float:left; width:65px; position:relative; margin:1px; border:1px #f8d3d3 solid}
+.buyprod{ float:left; position:relative; max-width:280px;  margin-bottom: 10px;}
+.titprod{ font-size:25px; font-family: 'bebas_neueregular'; float:left; position:relative; width:100%;}
+.img{ width:100%; height:auto}
 
-
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
-
-/* header */
-.ui-header > .ui-btn {
-    padding: 7px 10px 11px;
-    background:none;
-    border:none;
-    /*overflow:;*/
-}
-.ui-header .ui-title{
-
-margin: .8em 30% .8em;
-
-}
-
-/* home page */
-
-#logo{
-    width:70%;
-    max-width:206px;
-    margin:35px 0 40px;
-}
-.centerText{
-    text-align:center;
-}
-
-#home-page a{
-    margin-top:20px;
-    padding-top:8px;
-    padding-bottom:8px;
-}
-
-.ui-grid-a .ui-block-a .ui-btn{
-    margin-left: 0px;
-}
-
-.ui-grid-a .ui-block-b .ui-btn{
-    margin-right: 0px;
-}
-
-/* map */
-#second-page{
-   
-}
-.big-text{
-    font-size: 1.3em;
-}
-.small-text{
-    font-size:0.8em;
-}
+ #owl-demo .item img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
 
-.ui-btn-active {
-    border: 1px solid       #1abc9c /*{global-active-border}*/;
-    background:             #1abc9c /*{global-active-background-color}*/;
-    font-weight: bold;
-    color:                  #ffffff /*{global-active-color}*/;
-    cursor: pointer;
-    text-decoration: none;
-  font-family: Lato, sans-serif
-}
-
-
-.ui-icon-ms-phone {
-    background: url("../img/phone-icon.png") 50% 50% no-repeat;
-}
-.ui-icon-ms-question {
-    background: url("../img/question-icon.png") 50% 50% no-repeat;
-}
-.ui-icon-ms-search {
-    background: url("../img/search-icon.png") 50% 50% no-repeat;
-}

@@ -1,15 +1,165 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
-		<script type="text/javascript" src="phonegap.js"></script>
-        <title>Sistema Teste</title>
-    </head>
-    <body>
-		<h1>Teste</h1>
-		<p><a href="banner.html">Banner</a></p>
-		<p><a href="grafico.html">Gráfico</a></p>
-		<p><a href="calendario.html">Calendário</a></p>
-    </body>
-</html>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="cleartype" content="on">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<title>Catalogo de Produtos</title>
+	
+	<!--Include JQM and JQ-->
+	<link rel="stylesheet" href="css/themes/jqmfb.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.structure.min.css" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	
+	<!--JQM globals you can edit or remove file entirely... note it needs to be loaded before jquerymobile js -->
+	<script src="js/jqm.globals.js"></script>
+	
+	<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+	
+	<!--JQM SlideMenu-->
+	<link rel="stylesheet" href="css/jqm.slidemenu.css" />
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jqm.slidemenu.js"></script>
+	<script src="js/jqm.page.params.js"></script>
+	
+	<!-- Important Owl stylesheet -->
+	<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+	<!-- Default Theme -->
+	<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+		
+		 
+	<!-- Include js plugin -->
+	<script src="owl-carousel/owl.carousel.js"></script>
+	
+	<!-- Grafico -->	
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	
+	<!-- Calendario -->	
+		
+	<link rel="stylesheet" type="text/css" href="calendario/css/calendar.css" />
+	<link rel="stylesheet" type="text/css" href="calendario/css/custom_2.css" />
+	<script type="text/javascript" src="calendario/js/jquery.calendario.js"></script>
+	<script type="text/javascript" src="calendario/js/data.js"></script>
+	
+	<script type="text/javascript" src="js/scripts.js"></script>
+    <title>Sistema Teste</title>
+	<style>
+		#owl-demo .item img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="slidemenu">
+
+		<div id="profile">
+			
+			<div class="profile_info"></div>
+		</div>
+
+		<h3>MENU</h3>
+
+		<ul>
+			<li><a href="#main"><img src="img/smico3.png">Home</a></li>
+			<li><a href="#grafico"><img src="img/smico5.png">Grafico</a></li>
+			<li><a href="#banner"><img src="img/smico5.png">Banner</a></li>
+			<li><a href="#calendario"><img src="img/smico5.png">Calendario</a></li>
+			<li><a href="#banner2"><img src="img/smico5.png">Graficos com slide</a></li>
+		</ul>
+	</div>
+
+	<div data-role="page" id="main" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Recursos</h1>
+		</div>
+
+		<div data-role="main" id="main" class="ui-content">
+			<p>Sistema de testes.</p>
+		</div>
+
+	</div>
+	
+	<div data-role="page" id="grafico" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Grafico</h1>
+		</div>
+
+		<div data-role="main" id="main_grafico" class="ui-content">
+			<div id="container" style="width:100%; height:400px;"></div>
+		</div>
+	</div>	
+	
+	<div data-role="page" id="banner" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Grafico</h1>
+		</div>
+
+		<div data-role="main" id="main_banner" class="ui-content">
+			<div id="owl-demo" class="owl-carousel">
+				<div class="item"><img src="banner/1.jpg"></div>
+				<div class="item"><img src="banner/2.jpg"></div>
+			</div>
+		</div>
+	</div>	
+	
+	<div data-role="page" id="calendario" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Calendario</h1>
+		</div>
+
+		<div data-role="main" id="main_calendario" class="ui-content">
+		
+			<div class="custom-calendar-wrap">
+				<div id="custom-inner" class="custom-inner">
+					<div class="custom-header clearfix">
+						<nav>
+							<span id="custom-prev" class="custom-prev"></span>
+							<span id="custom-next" class="custom-next"></span>
+						</nav>
+						<h2 id="custom-month" class="custom-month"></h2>
+						<h3 id="custom-year" class="custom-year"></h3>
+					</div>
+					<div id="calendar" class="fc-calendar-container"></div>
+				</div>
+			</div>
+		
+		</div>
+	</div>	
+	
+	<div data-role="page" id="banner2" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Grafico com slide</h1>
+		</div>
+
+		<div data-role="main" id="main_banner2" class="ui-content">
+			<div id="owl-demo2" class="owl-carousel">
+				<div class="item"><div id="container2" style="width:100%; height:400px;"></div></div>
+				<div class="item"><div id="container3" style="width:100%; height:400px;"></div></div>
+				<div class="item"><div id="container4" style="width:100%; height:400px;"></div></div>
+			</div>
+		</div>
+	</div>	
+	
+	<script type="text/javascript" src="phonegap.js"></script>
+</body>
+</html>	
