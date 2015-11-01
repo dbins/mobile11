@@ -267,3 +267,125 @@ $(document).on('pageshow', '#banner2', function(){
 		itemsDesktopSmall : true,
 	});
 });
+
+$(document).on('pageshow', '#grafico2', function(){
+	$('#container5').highcharts({
+		chart: {
+			//Pie, bar, line, area
+            type: 'column'
+        },
+        title: {
+            text: 'Basic drilldown'
+        },
+        xAxis: {
+            type: 'category'
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        plotOptions: {
+            series: {
+				cursor: 'pointer',
+                point: {
+                    events: {
+                        click: function () {
+                            //alert('Category: ' + this.category + ', value: ' + this.y);
+                        }
+                    }
+                },
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+
+        series: [{
+            name: 'Things',
+            colorByPoint: true,
+            data: [{
+                name: 'Animals',
+                y: 5,
+                drilldown: 'animals'
+            }, {
+                name: 'Fruits',
+                y: 2,
+                drilldown: 'fruits'
+            }, {
+                name: 'Cars',
+                y: 4,
+                drilldown: 'cars'
+            }]
+        }],
+        drilldown: {
+            series: [{
+                id: 'animals',
+                data: [
+                    ['Cats', 4],
+                    ['Dogs', 2],
+                    ['Cows', 1],
+                    ['Sheep', 2],
+                    ['Pigs', 1]
+                ]
+            }, {
+                id: 'fruits',
+                data: [
+                    ['Apples', 4],
+                    ['Oranges', 2]
+                ]
+            }, {
+                id: 'cars',
+                data: [
+                    {
+					name: 'Toyota',
+					y: 5,
+					drilldown: 'toyota_cars'
+					},{
+					name: 'Opel',
+					y: 2,
+					drilldown: 'opel_cars'
+					},{
+					name: 'Volkswagen',
+					y: 8,
+					drilldown: 'vw_cars'
+					}
+                ]
+            },
+				{
+                id: 'vw_cars',
+                data: [
+                    ['Fusca', 4],
+                    ['Santana', 2],
+                    ['Voyage', 2],
+					['Gol', 6]
+                ]
+				},
+				{
+                id: 'opel_cars',
+                data: [
+                    ['Carro1', 4],
+                    ['Carro2', 2],
+                    ['Carro3', 2],
+					['Carro4', 6]
+                ]
+				},
+				{
+                id: 'toyota_cars',
+                data: [
+                    ['Bandeirante', 4],
+                    ['Etios', 2],
+                    ['Highlux', 2],
+					['Carro4', 6]
+                ]
+				}
+			]
+        }	
+	
+	});
+});
+
+$(document).on('pageinit', '#menu_responsivo', function(){
+	$('#dl-menu' ).dlmenu();
+});

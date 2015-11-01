@@ -10,13 +10,15 @@
 	<meta http-equiv="cleartype" content="on">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
-	<title>Catalogo de Produtos</title>
+	<title>Sistema de Teste</title>
+	
+	
 	
 	<!--Include JQM and JQ-->
 	<link rel="stylesheet" href="css/themes/jqmfb.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.structure.min.css" />
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	
 	<!--JQM globals you can edit or remove file entirely... note it needs to be loaded before jquerymobile js -->
 	<script src="js/jqm.globals.js"></script>
@@ -40,13 +42,22 @@
 	
 	<!-- Grafico -->	
 	<script src="http://code.highcharts.com/highcharts.js"></script>
-	
+	<script src="http://code.highcharts.com/modules/drilldown.js"></script>
 	<!-- Calendario -->	
 		
 	<link rel="stylesheet" type="text/css" href="calendario/css/calendar.css" />
 	<link rel="stylesheet" type="text/css" href="calendario/css/custom_2.css" />
 	<script type="text/javascript" src="calendario/js/jquery.calendario.js"></script>
 	<script type="text/javascript" src="calendario/js/data.js"></script>
+
+	
+	<!-- Menu responsivo -->	
+	
+	<link rel="stylesheet" type="text/css" href="dlmenu/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="dlmenu/css/component.css" />
+	<script src="dlmenu/js/modernizr.custom.js"></script>
+	<script src="dlmenu/js/jquery.dlmenu.js"></script>
+	
 	
 	<script type="text/javascript" src="js/scripts.js"></script>
     <title>Sistema Teste</title>
@@ -75,6 +86,8 @@
 			<li><a href="#banner"><img src="img/smico5.png">Banner</a></li>
 			<li><a href="#calendario"><img src="img/smico5.png">Calendario</a></li>
 			<li><a href="#banner2"><img src="img/smico5.png">Graficos com slide</a></li>
+			<li><a href="#grafico2"><img src="img/smico5.png">Grafico com drilldown</a></li>
+			<li><a href="#menu_responsivo"><img src="img/smico5.png">Menu Responsivo</a></li>
 		</ul>
 	</div>
 
@@ -86,7 +99,7 @@
 		</div>
 
 		<div data-role="main" id="main" class="ui-content">
-			<p>Sistema de testes.</p>
+			<p>Sistema de testes. Grafico, banners e calendario</p>
 		</div>
 
 	</div>
@@ -159,6 +172,131 @@
 			</div>
 		</div>
 	</div>	
+	
+	<div data-role="page" id="grafico2" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Grafico</h1>
+		</div>
+
+		<div data-role="main" id="main_grafico2" class="ui-content">
+			<div id="container5" style="width:100%; height:400px;"></div>
+		</div>
+	</div>	
+	
+	<div data-role="page" id="menu_responsivo" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Menu Responsivo</h1>
+		</div>
+
+		<div data-role="main" id="main_menu_responsivo" class="ui-content">
+			<div id="dl-menu" class="dl-menuwrapper">
+						<a href="#" class="dl-trigger">Open Menu</a>
+						<ul class="dl-menu">
+							<li>
+								<a href="#">Fashion</a>
+								<ul class="dl-submenu">
+									<li>
+										<a href="#">Men</a>
+										<ul class="dl-submenu">
+											<li><a href="#">Shirts</a></li>
+											<li><a href="#">Jackets</a></li>
+											<li><a href="#">Chinos &amp; Trousers</a></li>
+											<li><a href="#">Jeans</a></li>
+											<li><a href="#">T-Shirts</a></li>
+											<li><a href="#">Underwear</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Women</a>
+										<ul class="dl-submenu">
+											<li><a href="#">Jackets</a></li>
+											<li><a href="#">Knits</a></li>
+											<li><a href="#">Jeans</a></li>
+											<li><a href="#">Dresses</a></li>
+											<li><a href="#">Blouses</a></li>
+											<li><a href="#">T-Shirts</a></li>
+											<li><a href="#">Underwear</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Children</a>
+										<ul class="dl-submenu">
+											<li><a href="#">Boys</a></li>
+											<li><a href="#">Girls</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Electronics</a>
+								<ul class="dl-submenu">
+									<li><a href="#">Camera &amp; Photo</a></li>
+									<li><a href="#">TV &amp; Home Cinema</a></li>
+									<li><a href="#">Phones</a></li>
+									<li><a href="#">PC &amp; Video Games</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Furniture</a>
+								<ul class="dl-submenu">
+									<li>
+										<a href="#">Living Room</a>
+										<ul class="dl-submenu">
+											<li><a href="#">Sofas &amp; Loveseats</a></li>
+											<li><a href="#">Coffee &amp; Accent Tables</a></li>
+											<li><a href="#">Chairs &amp; Recliners</a></li>
+											<li><a href="#">Bookshelves</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Bedroom</a>
+										<ul class="dl-submenu">
+											<li>
+												<a href="#">Beds</a>
+												<ul class="dl-submenu">
+													<li><a href="#">Upholstered Beds</a></li>
+													<li><a href="#">Divans</a></li>
+													<li><a href="#">Metal Beds</a></li>
+													<li><a href="#">Storage Beds</a></li>
+													<li><a href="#">Wooden Beds</a></li>
+													<li><a href="#">Children's Beds</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Bedroom Sets</a></li>
+											<li><a href="#">Chests &amp; Dressers</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Home Office</a></li>
+									<li><a href="#">Dining &amp; Bar</a></li>
+									<li><a href="#">Patio</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Jewelry &amp; Watches</a>
+								<ul class="dl-submenu">
+									<li><a href="#">Fine Jewelry</a></li>
+									<li><a href="#">Fashion Jewelry</a></li>
+									<li><a href="#">Watches</a></li>
+									<li>
+										<a href="#">Wedding Jewelry</a>
+										<ul class="dl-submenu">
+											<li><a href="#">Engagement Rings</a></li>
+											<li><a href="#">Bridal Sets</a></li>
+											<li><a href="#">Women's Wedding Bands</a></li>
+											<li><a href="#">Men's Wedding Bands</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- /dl-menuwrapper -->
+		</div>
+	</div>	
+	
 	
 	<script type="text/javascript" src="phonegap.js"></script>
 </body>
