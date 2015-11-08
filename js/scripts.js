@@ -86,7 +86,7 @@ $(document).on('pageshow', '#calendario', function(){
 		}
 						
 		data_selecionada = dia + "/" + mes + "/" + ano;
-		document.location = "tela6.htm?data=" + data_selecionada;
+		//document.location = "tela6.htm?data=" + data_selecionada;
 						
 	},
 	caldata : codropsEvents,
